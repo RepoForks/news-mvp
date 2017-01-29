@@ -1,11 +1,11 @@
-package me.topas.rssreader;
+package me.topas.rssreader.main;
 
 import java.util.Random;
 
 import me.topas.rssreader.base.BasePresenter;
 
 /**
- * Created by ftoptas on 28/01/17.
+ * Created by faruktoptas on 28/01/17.
  */
 
 public class MainPresenter extends BasePresenter<MainContract.View> implements MainContract.Presenter {
