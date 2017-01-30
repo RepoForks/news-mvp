@@ -1,8 +1,11 @@
 package me.topas.rssreader.base;
 
+import me.topas.rssreader.model.RError;
+
 /**
- * Created by faruktoptas on 28/01/17.
+ * Created by faruktopas on 28/01/17.
  */
 
 public interface BaseView {
+    void onFail(RError rError);
 }

@@ -1,9 +1,7 @@
 package me.topas.rssreader.chrome;
 
-import android.content.ComponentName;
 import android.content.Context;
 import android.net.Uri;
-import android.support.customtabs.CustomTabsCallback;
 import android.support.customtabs.CustomTabsClient;
 import android.support.customtabs.CustomTabsIntent;
 import android.support.customtabs.CustomTabsServiceConnection;
@@ -13,10 +11,10 @@ import android.support.v4.content.ContextCompat;
 import me.topas.rssreader.R;
 
 /**
- * Created by faruktoptas on 29/01/17.
+ * Created by faruktopas on 29/01/17.
  */
 
-public class ChromeTabsWrapper {
+public class ChromeTabsWrapper implements ServiceConnectionCallback {
 
     private static final String CUSTOM_TAB_PACKAGE_NAME = "com.android.chrome";
 
@@ -39,22 +37,9 @@ public class ChromeTabsWrapper {
 
     public void bindCustomTabsService() {
         if (mClient != null) return;
-
-        mConnection = new CustomTabsServiceConnection() {
-            @Override
-            public void onCustomTabsServiceConnected(ComponentName name, CustomTabsClient client) {
-                mClient = client;
-                mClient.warmup(0);
-                if (mCustomTabsSession == null) {
-                    mCustomTabsSession = mClient.newSession(new CustomTabsCallback());
-                }
-            }
-
-            @Override
-            public void onServiceDisconnected(ComponentName componentName) {
-
-            }
-        };
+        if (mConnection == null) {
+            mConnection = new ServiceConnection(this);
+        }
         boolean ok = CustomTabsClient.bindCustomTabsService(mContext, CUSTOM_TAB_PACKAGE_NAME, mConnection);
     }
 
@@ -63,5 +48,16 @@ public class ChromeTabsWrapper {
         mContext.unbindService(mConnection);
         mClient = null;
         mCustomTabsSession = null;
+        mConnection = null;
+    }
+
+    @Override
+    public void onServiceConnected(CustomTabsClient client) {
+        mClient = client;
+    }
+
+    @Override
+    public void onServiceDisconnected() {
+        mClient = null;
     }
 }

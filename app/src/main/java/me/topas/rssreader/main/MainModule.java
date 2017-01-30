@@ -1,5 +1,7 @@
 package me.topas.rssreader.main;
 
+import javax.inject.Singleton;
+
 import dagger.Module;
 import dagger.Provides;
 
@@ -7,7 +9,9 @@ import dagger.Provides;
 public class MainModule {
 
     @Provides
+    @Singleton
     MainPresenter providesMainPresenter() {
         return new MainPresenter();
     }
+
 }

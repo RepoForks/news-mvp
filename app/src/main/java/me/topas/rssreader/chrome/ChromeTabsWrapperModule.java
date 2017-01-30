@@ -2,11 +2,13 @@ package me.topas.rssreader.chrome;
 
 import android.content.Context;
 
+import javax.inject.Singleton;
+
 import dagger.Module;
 import dagger.Provides;
 
 /**
- * Created by faruktoptas on 29/01/17.
+ * Created by faruktopas on 29/01/17.
  */
 
 @Module
@@ -18,7 +20,9 @@ public class ChromeTabsWrapperModule {
         mContext = context;
     }
 
+
     @Provides
+    @Singleton
     ChromeTabsWrapper providesChromeTabsWrapper() {
         return new ChromeTabsWrapper(mContext);
     }
