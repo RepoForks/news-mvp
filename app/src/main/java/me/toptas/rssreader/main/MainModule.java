@@ -1,4 +1,4 @@
-package me.topas.rssreader.main;
+package me.toptas.rssreader.main;
 
 import dagger.Module;
 import dagger.Provides;

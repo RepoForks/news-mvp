@@ -1,8 +1,8 @@
-package me.topas.rssreader.main;
+package me.toptas.rssreader.main;
 
 import java.util.Random;
 
-import me.topas.rssreader.base.BasePresenter;
+import me.toptas.rssreader.base.BasePresenter;
 
 /**
  * Created by faruktoptas on 28/01/17.

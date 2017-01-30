@@ -1,4 +1,4 @@
-package me.topas.rssreader.chrome;
+package me.toptas.rssreader.chrome;
 
 import android.content.Context;
 

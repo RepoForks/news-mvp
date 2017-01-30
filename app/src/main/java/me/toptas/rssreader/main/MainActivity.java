@@ -1,4 +1,4 @@
-package me.topas.rssreader.main;
+package me.toptas.rssreader.main;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -8,10 +8,10 @@ import javax.inject.Inject;
 
 import butterknife.BindView;
 import butterknife.OnClick;
-import me.topas.rssreader.R;
-import me.topas.rssreader.base.BaseActivity;
-import me.topas.rssreader.chrome.ChromeTabsWrapper;
-import me.topas.rssreader.chrome.ChromeTabsWrapperModule;
+import me.toptas.rssreader.R;
+import me.toptas.rssreader.base.BaseActivity;
+import me.toptas.rssreader.chrome.ChromeTabsWrapper;
+import me.toptas.rssreader.chrome.ChromeTabsWrapperModule;
 
 public class MainActivity extends BaseActivity<MainPresenter> implements MainContract.View {
 

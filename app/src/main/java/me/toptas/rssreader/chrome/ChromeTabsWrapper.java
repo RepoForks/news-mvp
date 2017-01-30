@@ -1,4 +1,4 @@
-package me.topas.rssreader.chrome;
+package me.toptas.rssreader.chrome;
 
 import android.content.ComponentName;
 import android.content.Context;
@@ -10,7 +10,7 @@ import android.support.customtabs.CustomTabsServiceConnection;
 import android.support.customtabs.CustomTabsSession;
 import android.support.v4.content.ContextCompat;
 
-import me.topas.rssreader.R;
+import me.toptas.rssreader.R;
 
 /**
  * Created by faruktoptas on 29/01/17.
