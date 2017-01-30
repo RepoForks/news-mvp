@@ -1,4 +1,4 @@
-package me.topas.rssreader.base;
+package me.toptas.rssreader.base;
 
 import android.os.Bundle;
 import android.support.annotation.LayoutRes;
@@ -13,7 +13,7 @@ import javax.inject.Inject;
 import butterknife.ButterKnife;
 
 /**
- * Created by ftopas on 29/01/17.
+ * Created by ftoptas on 29/01/17.
  */
 
 public abstract class BaseFragment<T extends BasePresenter> extends Fragment implements BaseView {

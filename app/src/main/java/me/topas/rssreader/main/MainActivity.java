@@ -1,4 +1,4 @@
-package me.topas.rssreader.main;
+package me.toptas.rssreader.main;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -11,16 +11,16 @@ import java.util.List;
 import javax.inject.Inject;
 
 import butterknife.BindView;
-import me.topas.rssreader.R;
-import me.topas.rssreader.base.BaseActivity;
-import me.topas.rssreader.chrome.ChromeTabsWrapper;
-import me.topas.rssreader.chrome.ChromeTabsWrapperModule;
-import me.topas.rssreader.model.Feed;
-import me.topas.rssreader.model.RError;
-import me.topas.rssreader.model.RssItem;
-import me.topas.rssreader.rss.RssFragment;
-import me.topas.rssreader.rss.RssFragmentAdapter;
-import me.topas.rssreader.util.FeedParser;
+import me.toptas.rssreader.R;
+import me.toptas.rssreader.base.BaseActivity;
+import me.toptas.rssreader.chrome.ChromeTabsWrapper;
+import me.toptas.rssreader.chrome.ChromeTabsWrapperModule;
+import me.toptas.rssreader.model.Feed;
+import me.toptas.rssreader.model.RError;
+import me.toptas.rssreader.model.RssItem;
+import me.toptas.rssreader.rss.RssFragment;
+import me.toptas.rssreader.rss.RssFragmentAdapter;
+import me.toptas.rssreader.util.FeedParser;
 
 public class MainActivity extends BaseActivity<MainPresenter> implements MainContract.View, RssFragment.OnItemSelectListener {
 

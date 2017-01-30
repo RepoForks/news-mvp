@@ -1,4 +1,4 @@
-package me.topas.rssreader.model;
+package me.toptas.rssreader.model;
 
 public class RssItem {
 

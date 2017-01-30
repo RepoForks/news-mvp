@@ -1,4 +1,4 @@
-package me.topas.rssreader.util;
+package me.toptas.rssreader.util;
 
 import android.content.Context;
 
@@ -7,7 +7,7 @@ import com.google.gson.Gson;
 import java.util.Arrays;
 import java.util.List;
 
-import me.topas.rssreader.model.Feed;
+import me.toptas.rssreader.model.Feed;
 
 public class FeedParser {
 

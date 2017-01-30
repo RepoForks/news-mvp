@@ -1,4 +1,4 @@
-package me.topas.rssreader.parser;
+package me.toptas.rssreader.parser;
 
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
@@ -6,7 +6,7 @@ import org.xml.sax.helpers.DefaultHandler;
 
 import java.util.ArrayList;
 
-import me.topas.rssreader.model.RssItem;
+import me.toptas.rssreader.model.RssItem;
 
 public class RssParser extends DefaultHandler {
 

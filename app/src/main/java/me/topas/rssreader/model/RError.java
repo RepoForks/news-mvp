@@ -1,7 +1,7 @@
-package me.topas.rssreader.model;
+package me.toptas.rssreader.model;
 
 /**
- * Created by ftopas on 29/01/17.
+ * Created by ftoptas on 29/01/17.
  */
 
 public class RError {

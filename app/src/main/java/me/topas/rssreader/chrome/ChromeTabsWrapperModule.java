@@ -1,4 +1,4 @@
-package me.topas.rssreader.chrome;
+package me.toptas.rssreader.chrome;
 
 import android.content.Context;
 
@@ -8,7 +8,7 @@ import dagger.Module;
 import dagger.Provides;
 
 /**
- * Created by faruktopas on 29/01/17.
+ * Created by faruktoptas on 29/01/17.
  */
 
 @Module

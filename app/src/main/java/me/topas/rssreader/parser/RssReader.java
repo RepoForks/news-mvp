@@ -1,4 +1,4 @@
-package me.topas.rssreader.parser;
+package me.toptas.rssreader.parser;
 
 import android.os.AsyncTask;
 import android.support.annotation.Nullable;
@@ -18,8 +18,8 @@ import java.util.ArrayList;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 
-import me.topas.rssreader.base.Logger;
-import me.topas.rssreader.model.RssItem;
+import me.toptas.rssreader.base.Logger;
+import me.toptas.rssreader.model.RssItem;
 
 public class RssReader extends AsyncTask<Void, Integer, ArrayList<RssItem>> {
 

@@ -1,10 +1,10 @@
-package me.topas.rssreader.rss;
+package me.toptas.rssreader.rss;
 
 import dagger.Module;
 import dagger.Provides;
 
 /**
- * Created by ftopas on 29/01/17.
+ * Created by ftoptas on 29/01/17.
  */
 
 @Module

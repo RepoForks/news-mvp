@@ -1,4 +1,4 @@
-package me.topas.rssreader.rss;
+package me.toptas.rssreader.rss;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;

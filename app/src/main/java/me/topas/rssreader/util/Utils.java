@@ -1,4 +1,4 @@
-package me.topas.rssreader.util;
+package me.toptas.rssreader.util;
 
 import android.content.Context;
 import android.content.res.AssetManager;
@@ -12,7 +12,7 @@ import java.util.Date;
 import java.util.Locale;
 
 /**
- * Created by ftopas on 29/01/17.
+ * Created by ftoptas on 29/01/17.
  */
 
 public class Utils {

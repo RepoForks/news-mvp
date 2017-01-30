@@ -1,4 +1,4 @@
-package me.topas.rssreader.rss;
+package me.toptas.rssreader.rss;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -16,9 +16,9 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import me.topas.rssreader.R;
-import me.topas.rssreader.model.RssItem;
-import me.topas.rssreader.util.NullUtils;
+import me.toptas.rssreader.R;
+import me.toptas.rssreader.model.RssItem;
+import me.toptas.rssreader.util.NullUtils;
 
 public class RssItemsAdapter extends RecyclerView.Adapter<RssItemsAdapter.ViewHolder> {
 

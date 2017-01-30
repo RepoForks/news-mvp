@@ -1,22 +1,22 @@
-package me.topas.rssreader.rss;
+package me.toptas.rssreader.rss;
 
 import java.util.List;
 
 import javax.inject.Inject;
 import javax.inject.Singleton;
 
-import me.topas.rssreader.app.DaggerAppComponent;
-import me.topas.rssreader.app.SessionData;
-import me.topas.rssreader.base.BasePresenter;
-import me.topas.rssreader.base.Logger;
-import me.topas.rssreader.model.Feed;
-import me.topas.rssreader.model.RError;
-import me.topas.rssreader.model.RssItem;
-import me.topas.rssreader.parser.OnRssParserListener;
-import me.topas.rssreader.parser.RssReader;
+import me.toptas.rssreader.app.DaggerAppComponent;
+import me.toptas.rssreader.app.SessionData;
+import me.toptas.rssreader.base.BasePresenter;
+import me.toptas.rssreader.base.Logger;
+import me.toptas.rssreader.model.Feed;
+import me.toptas.rssreader.model.RError;
+import me.toptas.rssreader.model.RssItem;
+import me.toptas.rssreader.parser.OnRssParserListener;
+import me.toptas.rssreader.parser.RssReader;
 
 /**
- * Created by ftopas on 29/01/17.
+ * Created by ftoptas on 29/01/17.
  */
 
 public class RssPresenter extends BasePresenter<RssContract.View> implements RssContract.Presenter, OnRssParserListener {

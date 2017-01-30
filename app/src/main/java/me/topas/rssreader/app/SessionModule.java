@@ -1,4 +1,4 @@
-package me.topas.rssreader.app;
+package me.toptas.rssreader.app;
 
 import javax.inject.Singleton;
 

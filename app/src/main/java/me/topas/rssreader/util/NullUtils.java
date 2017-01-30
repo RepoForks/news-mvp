@@ -1,4 +1,4 @@
-package me.topas.rssreader.util;
+package me.toptas.rssreader.util;
 
 import android.support.annotation.Nullable;
 

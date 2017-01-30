@@ -1,9 +1,9 @@
-package me.topas.rssreader.base;
+package me.toptas.rssreader.base;
 
-import me.topas.rssreader.model.RError;
+import me.toptas.rssreader.model.RError;
 
 /**
- * Created by faruktopas on 28/01/17.
+ * Created by faruktoptas on 28/01/17.
  */
 
 public interface BaseView {

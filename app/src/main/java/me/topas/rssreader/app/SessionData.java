@@ -1,9 +1,9 @@
-package me.topas.rssreader.app;
+package me.toptas.rssreader.app;
 
 import java.util.HashMap;
 import java.util.List;
 
-import me.topas.rssreader.model.RssItem;
+import me.toptas.rssreader.model.RssItem;
 
 public class SessionData {
     private final HashMap<String, List<RssItem>> mContentMap = new HashMap<>();

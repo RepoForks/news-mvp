@@ -1,4 +1,4 @@
-package me.topas.rssreader.model;
+package me.toptas.rssreader.model;
 
 import com.google.gson.annotations.SerializedName;
 

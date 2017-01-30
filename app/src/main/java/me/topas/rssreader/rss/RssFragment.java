@@ -1,4 +1,4 @@
-package me.topas.rssreader.rss;
+package me.toptas.rssreader.rss;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -12,14 +12,14 @@ import android.widget.TextView;
 import java.util.List;
 
 import butterknife.BindView;
-import me.topas.rssreader.R;
-import me.topas.rssreader.base.BaseFragment;
-import me.topas.rssreader.model.Feed;
-import me.topas.rssreader.model.RError;
-import me.topas.rssreader.model.RssItem;
+import me.toptas.rssreader.R;
+import me.toptas.rssreader.base.BaseFragment;
+import me.toptas.rssreader.model.Feed;
+import me.toptas.rssreader.model.RError;
+import me.toptas.rssreader.model.RssItem;
 
 /**
- * Created by ftopas on 29/01/17.
+ * Created by ftoptas on 29/01/17.
  */
 
 public class RssFragment extends BaseFragment<RssPresenter> implements RssContract.View, SwipeRefreshLayout.OnRefreshListener, RssItemsAdapter.OnItemClickListener {

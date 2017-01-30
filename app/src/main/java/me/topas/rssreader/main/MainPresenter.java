@@ -1,9 +1,9 @@
-package me.topas.rssreader.main;
+package me.toptas.rssreader.main;
 
-import me.topas.rssreader.base.BasePresenter;
+import me.toptas.rssreader.base.BasePresenter;
 
 /**
- * Created by faruktopas on 28/01/17.
+ * Created by faruktoptas on 28/01/17.
  */
 
 public class MainPresenter extends BasePresenter<MainContract.View> implements MainContract.Presenter {
