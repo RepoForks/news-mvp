@@ -2,6 +2,8 @@ package me.toptas.rssreader.main;
 
 import java.util.Random;
 
+import javax.inject.Inject;
+
 import me.toptas.rssreader.base.BasePresenter;
 
 /**
@@ -12,10 +14,14 @@ public class MainPresenter extends BasePresenter<MainContract.View> implements M
 
     private String[] helloTexts = {"BONJOUR", "HOLA", "HALLO", "MERHABA", "HELLO", "CIAO", "KONNICHIWA"};
 
+    @Inject
+    public MainPresenter() {
+    }
+
     @Override
     public void loadHelloText() {
         Random random = new Random();
         String hello = helloTexts[random.nextInt(helloTexts.length)];
-        mView.onTextLoaded(hello);
+        getView().onTextLoaded(hello);
     }
 }

@@ -8,8 +8,11 @@ import android.support.v7.app.AppCompatActivity;
 import javax.inject.Inject;
 
 import butterknife.ButterKnife;
+import me.toptas.rssreader.di.component.ActivityComponent;
+import me.toptas.rssreader.di.component.DaggerActivityComponent;
+import me.toptas.rssreader.di.module.ActivityModule;
 
-public abstract class BaseActivity<T extends BasePresenter> extends AppCompatActivity implements BaseView {
+public abstract class BaseActivity<T extends BaseMvpPresenter> extends AppCompatActivity implements BaseView {
 
     /**
      * Injected presenter
@@ -17,11 +20,16 @@ public abstract class BaseActivity<T extends BasePresenter> extends AppCompatAct
     @Inject
     T mPresenter;
 
+    private ActivityComponent mActivityComponent;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(getContentResource());
         ButterKnife.bind(this);
+        mActivityComponent = DaggerActivityComponent.builder()
+                .activityModule(new ActivityModule(this))
+                .build();
         injectDependencies();
         mPresenter.attach(this);
         init(savedInstanceState);
@@ -34,6 +42,11 @@ public abstract class BaseActivity<T extends BasePresenter> extends AppCompatAct
     protected void onDestroy() {
         super.onDestroy();
         mPresenter.detach();
+    }
+
+
+    public ActivityComponent getActivityComponent() {
+        return mActivityComponent;
     }
 
     /**
@@ -58,6 +71,9 @@ public abstract class BaseActivity<T extends BasePresenter> extends AppCompatAct
      */
     protected abstract void init(@Nullable Bundle state);
 
-    public abstract void injectDependencies();
+    /**
+     * Injecting dependencies
+     */
+    protected abstract void injectDependencies();
 
 }

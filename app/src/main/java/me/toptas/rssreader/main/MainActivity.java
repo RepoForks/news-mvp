@@ -11,7 +11,6 @@ import butterknife.OnClick;
 import me.toptas.rssreader.R;
 import me.toptas.rssreader.base.BaseActivity;
 import me.toptas.rssreader.chrome.ChromeTabsWrapper;
-import me.toptas.rssreader.chrome.ChromeTabsWrapperModule;
 
 public class MainActivity extends BaseActivity<MainPresenter> implements MainContract.View {
 
@@ -35,12 +34,7 @@ public class MainActivity extends BaseActivity<MainPresenter> implements MainCon
 
     @Override
     public void injectDependencies() {
-        DaggerMainComponent
-                .builder()
-                .mainModule(new MainModule())
-                .chromeTabsWrapperModule(new ChromeTabsWrapperModule(this))
-                .build()
-                .inject(this);
+        getActivityComponent().inject(this);
     }
 
 
