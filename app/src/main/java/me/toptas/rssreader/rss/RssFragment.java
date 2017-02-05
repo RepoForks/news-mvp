@@ -71,7 +71,7 @@ public class RssFragment extends BaseFragment<RssPresenter> implements RssContra
 
     @Override
     public void injectDependencies() {
-        DaggerRssComponent.create().inject(this);
+        getFragmentComponent().inject(this);
     }
 
     @Override
@@ -117,7 +117,7 @@ public class RssFragment extends BaseFragment<RssPresenter> implements RssContra
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        if (context  instanceof OnItemSelectListener){
+        if (context instanceof OnItemSelectListener) {
             mListener = (OnItemSelectListener) context;
         }
     }

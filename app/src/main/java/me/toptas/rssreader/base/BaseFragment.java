@@ -11,19 +11,27 @@ import android.view.ViewGroup;
 import javax.inject.Inject;
 
 import butterknife.ButterKnife;
+import me.toptas.rssreader.di.component.DaggerFragmentComponent;
+import me.toptas.rssreader.di.component.FragmentComponent;
+import me.toptas.rssreader.di.module.FragmentModule;
 
 /**
  * Created by ftoptas on 29/01/17.
  */
 
-public abstract class BaseFragment<T extends BasePresenter> extends Fragment implements BaseView {
+public abstract class BaseFragment<T extends BaseMvpPresenter> extends Fragment implements BaseView {
 
     @Inject
     T mPresenter;
 
+    FragmentComponent mFragmentComponent;
+
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        mFragmentComponent = DaggerFragmentComponent.builder()
+                .fragmentModule(new FragmentModule())
+                .build();
         injectDependencies();
     }
 
@@ -41,6 +49,10 @@ public abstract class BaseFragment<T extends BasePresenter> extends Fragment imp
     public void onDetach() {
         super.onDetach();
         mPresenter.detach();
+    }
+
+    public FragmentComponent getFragmentComponent() {
+        return mFragmentComponent;
     }
 
     /**

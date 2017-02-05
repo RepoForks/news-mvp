@@ -14,7 +14,6 @@ import butterknife.BindView;
 import me.toptas.rssreader.R;
 import me.toptas.rssreader.base.BaseActivity;
 import me.toptas.rssreader.chrome.ChromeTabsWrapper;
-import me.toptas.rssreader.chrome.ChromeTabsWrapperModule;
 import me.toptas.rssreader.model.Feed;
 import me.toptas.rssreader.model.RError;
 import me.toptas.rssreader.model.RssItem;
@@ -22,7 +21,7 @@ import me.toptas.rssreader.rss.RssFragment;
 import me.toptas.rssreader.rss.RssFragmentAdapter;
 import me.toptas.rssreader.util.FeedParser;
 
-public class MainActivity extends BaseActivity<MainPresenter> implements MainContract.View, RssFragment.OnItemSelectListener {
+public class MainActivity extends BaseActivity<MainContract.Presenter> implements MainContract.View, RssFragment.OnItemSelectListener {
 
 
     @BindView(R.id.viewPager)
@@ -36,7 +35,6 @@ public class MainActivity extends BaseActivity<MainPresenter> implements MainCon
 
     @Inject
     ChromeTabsWrapper mChromeTabsWrapper;
-
 
     @Override
     protected int getContentResource() {
@@ -53,12 +51,7 @@ public class MainActivity extends BaseActivity<MainPresenter> implements MainCon
 
     @Override
     public void injectDependencies() {
-        DaggerMainComponent.builder()
-                .mainModule(new MainModule())
-                .chromeTabsWrapperModule(new ChromeTabsWrapperModule(this))
-                .build()
-                .inject(this);
-
+        getActivityComponent().inject(this);
     }
 
     @Override
