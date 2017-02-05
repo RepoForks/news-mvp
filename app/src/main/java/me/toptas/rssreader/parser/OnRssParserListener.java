@@ -5,7 +5,7 @@ import java.util.List;
 import me.toptas.rssreader.model.RssItem;
 
 /**
- * Created by ftoptas on 29/01/17.
+ * Created by faruktoptas on 29/01/17.
  */
 
 public interface OnRssParserListener {

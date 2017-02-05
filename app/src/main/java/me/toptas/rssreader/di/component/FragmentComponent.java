@@ -5,7 +5,7 @@ import me.toptas.rssreader.di.module.FragmentModule;
 import me.toptas.rssreader.rss.RssFragment;
 
 /**
- * Created by ftoptas on 29/01/17.
+ * Created by faruktoptas on 29/01/17.
  */
 
 @Component(modules = {FragmentModule.class})

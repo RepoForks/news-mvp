@@ -16,7 +16,7 @@ import me.toptas.rssreader.di.component.FragmentComponent;
 import me.toptas.rssreader.di.module.FragmentModule;
 
 /**
- * Created by ftoptas on 29/01/17.
+ * Created by faruktoptas on 29/01/17.
  */
 
 public abstract class BaseFragment<T extends BaseMvpPresenter> extends Fragment implements BaseView {

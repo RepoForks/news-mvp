@@ -2,6 +2,9 @@ package me.toptas.rssreader.base;
 
 public class BasePresenter<V extends BaseView> implements BaseMvpPresenter<V> {
 
+    /**
+     * Attached view
+     */
     private V mView;
 
 

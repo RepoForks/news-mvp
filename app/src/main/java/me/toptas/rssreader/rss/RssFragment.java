@@ -19,7 +19,7 @@ import me.toptas.rssreader.model.RError;
 import me.toptas.rssreader.model.RssItem;
 
 /**
- * Created by ftoptas on 29/01/17.
+ * Created by faruktoptas on 29/01/17.
  */
 
 public class RssFragment extends BaseFragment<RssPresenter> implements RssContract.View, SwipeRefreshLayout.OnRefreshListener, RssItemsAdapter.OnItemClickListener {

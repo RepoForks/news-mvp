@@ -15,12 +15,15 @@ public class SessionData {
 
     private final HashMap<String, List<RssItem>> mContentMap = new HashMap<>();
 
-    public HashMap<String, List<RssItem>> getContentMap() {
-        return mContentMap;
-    }
-
-
     public boolean hasUrl(String url) {
         return mContentMap.containsKey(url);
+    }
+
+    public void addContent(String url, List<RssItem> items) {
+        mContentMap.put(url, items);
+    }
+
+    public List<RssItem> getContent(String url) {
+        return mContentMap.get(url);
     }
 }

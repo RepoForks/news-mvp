@@ -14,7 +14,7 @@ import me.toptas.rssreader.parser.OnRssParserListener;
 import me.toptas.rssreader.parser.RssReader;
 
 /**
- * Created by ftoptas on 29/01/17.
+ * Created by faruktoptas on 29/01/17.
  */
 
 public class RssPresenter extends BasePresenter<RssContract.View> implements RssContract.Presenter, OnRssParserListener {
@@ -30,7 +30,7 @@ public class RssPresenter extends BasePresenter<RssContract.View> implements Rss
     public void loadRssItems(Feed feed, boolean fromCache) {
         if (mSessionData.hasUrl(feed.getUrl()) && fromCache) {
             Logger.logv("Read from cache: " + feed.getUrl());
-            getView().onRssItemsLoaded(mSessionData.getContentMap().get(feed.getUrl()));
+            getView().onRssItemsLoaded(mSessionData.getContent(feed.getUrl()));
         } else {
             RssReader request = new RssReader(this, feed.getUrl());
             request.execute();
@@ -47,7 +47,7 @@ public class RssPresenter extends BasePresenter<RssContract.View> implements Rss
 
     @Override
     public void onSuccess(List<RssItem> rssItemList, String rssUrl) {
-        mSessionData.getContentMap().put(rssUrl, rssItemList);
+        mSessionData.addContent(rssUrl, rssItemList);
         if (isAttached()) {
             getView().onRssItemsLoaded(rssItemList);
             getView().hideLoading();

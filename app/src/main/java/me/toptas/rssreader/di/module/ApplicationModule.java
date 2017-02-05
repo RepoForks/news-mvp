@@ -8,7 +8,7 @@ import me.toptas.rssreader.RssApplication;
 import me.toptas.rssreader.app.SessionData;
 
 /**
- * Created by ftoptas on 05/02/17.
+ * Created by faruktoptas on 05/02/17.
  */
 
 @Module

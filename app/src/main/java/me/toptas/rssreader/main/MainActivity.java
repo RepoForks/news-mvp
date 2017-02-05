@@ -15,7 +15,6 @@ import me.toptas.rssreader.R;
 import me.toptas.rssreader.base.BaseActivity;
 import me.toptas.rssreader.chrome.ChromeTabsWrapper;
 import me.toptas.rssreader.model.Feed;
-import me.toptas.rssreader.model.RError;
 import me.toptas.rssreader.model.RssItem;
 import me.toptas.rssreader.rss.RssFragment;
 import me.toptas.rssreader.rss.RssFragmentAdapter;
@@ -74,11 +73,6 @@ public class MainActivity extends BaseActivity<MainContract.Presenter> implement
 
 
     @Override
-    public void onFail(RError rError) {
-
-    }
-
-    @Override
     public void onItemSelected(RssItem rssItem) {
         mChromeTabsWrapper.openCustomtab(rssItem.getUrl());
     }
@@ -93,9 +87,5 @@ public class MainActivity extends BaseActivity<MainContract.Presenter> implement
 
         RssFragmentAdapter adapter = new RssFragmentAdapter(getSupportFragmentManager(), fragmentList, titles);
         mViewPager.setAdapter(adapter);
-    }
-
-    private void setupTabbar() {
-
     }
 }

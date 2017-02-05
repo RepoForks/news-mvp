@@ -7,7 +7,7 @@ import me.toptas.rssreader.RssApplication;
 import me.toptas.rssreader.di.module.ApplicationModule;
 
 /**
- * Created by ftoptas on 05/02/17.
+ * Created by faruktoptas on 05/02/17.
  */
 
 @Singleton

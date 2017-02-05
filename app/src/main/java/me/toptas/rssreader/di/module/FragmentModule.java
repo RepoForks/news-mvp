@@ -7,7 +7,7 @@ import me.toptas.rssreader.rss.RssContract;
 import me.toptas.rssreader.rss.RssPresenter;
 
 /**
- * Created by ftoptas on 29/01/17.
+ * Created by faruktoptas on 29/01/17.
  */
 
 @Module

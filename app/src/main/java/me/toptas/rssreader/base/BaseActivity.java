@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.annotation.LayoutRes;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.Toast;
 
 import javax.inject.Inject;
 
@@ -11,6 +12,7 @@ import butterknife.ButterKnife;
 import me.toptas.rssreader.di.component.ActivityComponent;
 import me.toptas.rssreader.di.component.DaggerActivityComponent;
 import me.toptas.rssreader.di.module.ActivityModule;
+import me.toptas.rssreader.model.RError;
 
 public abstract class BaseActivity<T extends BaseMvpPresenter> extends AppCompatActivity implements BaseView {
 
@@ -56,6 +58,11 @@ public abstract class BaseActivity<T extends BaseMvpPresenter> extends AppCompat
      */
     public T getPresenter() {
         return mPresenter;
+    }
+
+    @Override
+    public void onFail(RError rError) {
+        Toast.makeText(this, rError.getMessage(), Toast.LENGTH_SHORT).show();
     }
 
     /**
