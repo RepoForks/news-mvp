@@ -61,8 +61,10 @@ public abstract class BaseActivity<T extends BaseMvpPresenter> extends AppCompat
     }
 
     @Override
-    public void onFail(RError rError) {
-        Toast.makeText(this, rError.getMessage(), Toast.LENGTH_SHORT).show();
+    public void onFail(RError error) {
+        if (!isFinishing()) {
+            Toast.makeText(this, error.getMessage(), Toast.LENGTH_SHORT).show();
+        }
     }
 
     /**

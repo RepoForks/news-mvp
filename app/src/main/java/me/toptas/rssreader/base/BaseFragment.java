@@ -7,6 +7,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import javax.inject.Inject;
 
@@ -14,6 +15,7 @@ import butterknife.ButterKnife;
 import me.toptas.rssreader.di.component.DaggerFragmentComponent;
 import me.toptas.rssreader.di.component.FragmentComponent;
 import me.toptas.rssreader.di.module.FragmentModule;
+import me.toptas.rssreader.model.RError;
 
 /**
  * Created by faruktoptas on 29/01/17.
@@ -81,4 +83,11 @@ public abstract class BaseFragment<T extends BaseMvpPresenter> extends Fragment 
      * Injecting dependencies
      */
     protected abstract void injectDependencies();
+
+    @Override
+    public void onFail(RError error) {
+        if (isAdded()) {
+            Toast.makeText(getActivity(), error.getMessage(), Toast.LENGTH_SHORT).show();
+        }
+    }
 }
