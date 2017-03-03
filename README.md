@@ -6,7 +6,7 @@ This app is explained in a series of Articles on medium.com
 1. [Android App From Scratch Part 1 - Model-View-Presenter](https://medium.com/@faruktoptas/android-app-from-scratch-part-1-model-view-presenter-b5f629f2d9a1#.6uvmiaje2)
 2. [Android App From Scratch Part 2 - Implementing must have libraries](https://medium.com/@faruktoptas/android-app-from-scratch-part-2-implementing-must-have-libraries-88ed453f3038#.7h0g87oql)
 3. [Android App From Scratch Part 3 - Implementing App Logic](https://medium.com/@faruktoptas/android-app-from-scratch-part-3-implementing-app-logic-2b62ae65dcc4#.64g0334u4)
-4. Creating unit tests with JUnit
+4. [Android App From Scratch Part 3 - Creating unit tests with JUnit](https://medium.com/@faruktoptas/android-app-from-scratch-part-4-creating-unit-tests-with-junit-dd2875802aa0#.g8tv8j5vx)
 5. Creating Android Instrumentations tests
 6. Continuous Integration with Travis-CI
 7. Making the app ready for Play Store
