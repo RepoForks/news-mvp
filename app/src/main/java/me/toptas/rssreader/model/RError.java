@@ -6,6 +6,8 @@ package me.toptas.rssreader.model;
 
 public class RError {
 
+    public static final String ERROR_FETCH = "Failed to fetch RSS!";
+
     private final String mMessage;
 
     public RError(String message) {

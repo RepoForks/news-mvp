@@ -6,7 +6,6 @@ import javax.inject.Inject;
 
 import me.toptas.rssreader.app.SessionData;
 import me.toptas.rssreader.base.BasePresenter;
-import me.toptas.rssreader.base.Logger;
 import me.toptas.rssreader.model.Feed;
 import me.toptas.rssreader.model.RError;
 import me.toptas.rssreader.model.RssItem;
@@ -29,7 +28,6 @@ public class RssPresenter extends BasePresenter<RssContract.View> implements Rss
     @Override
     public void loadRssItems(Feed feed, boolean fromCache) {
         if (mSessionData.hasUrl(feed.getUrl()) && fromCache) {
-            Logger.logv("Read from cache: " + feed.getUrl());
             getView().onRssItemsLoaded(mSessionData.getContent(feed.getUrl()));
         } else {
             RssReader request = new RssReader(this, feed.getUrl());
@@ -60,5 +58,9 @@ public class RssPresenter extends BasePresenter<RssContract.View> implements Rss
             getView().hideLoading();
             getView().onFail(new RError("Failed to fetch RSS!"));
         }
+    }
+
+    public SessionData getSessionData() {
+        return mSessionData;
     }
 }
