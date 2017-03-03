@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: 'idea'
 
 buildscript {
     repositories {
@@ -17,9 +18,24 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
+        debug {
+            buildConfigField "boolean", "IS_TESTING", "false"
+        }
+        staging {
+            buildConfigField "boolean", "IS_TESTING", "true"
+        }
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            buildConfigField "boolean", "IS_TESTING", "false"
+        }
+    }
+
+    sourceSets {
+        test.setRoot( 'src/test' )
+
+        test {
+            assets.srcDir file( 'src/test/assets' )
         }
     }
 }
@@ -41,9 +57,15 @@ dependencies {
         transitive = true
     }
     debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5'
+    stagingCompile 'com.squareup.leakcanary:leakcanary-android:1.5'
+
 
     // Test dependencies
     testCompile 'junit:junit:4.12'
+    testCompile 'org.mockito:mockito-core:1.10.19'
+    testCompile "org.robolectric:robolectric:3.2.2",{
+        exclude group: 'com.google.guava', module: 'guava'
+    }
 
     // Instrumentation test dependencies
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
@@ -51,4 +73,10 @@ dependencies {
     })
 
 
+}
+
+tasks.withType(Test) {
+    testLogging {
+        events "started", "passed", "skipped", "failed"
+    }
 }
