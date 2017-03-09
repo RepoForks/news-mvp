@@ -27,6 +27,8 @@ This app is explained in a series of Articles on medium.com
 5. [ButterKnife](jakewharton.github.io/butterknife/)
 6. [LeakCanary](https://github.com/square/leakcanary)
 
+![!gif](https://github.com/faruktoptas/news-mvp/blob/master/art/app.gif?raw=true)
+
 License
 =======
 
